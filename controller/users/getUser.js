@@ -5,7 +5,8 @@ const users = [
 
 exports.getUser = (request, response) => {
   const { id } = request.params;
-
+  console.log(request.params);
+  console.log(request.body);
   const user = users.find((user) => user.id === Number(id));
 
   if (user) {
